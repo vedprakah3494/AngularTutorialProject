@@ -1,0 +1,2 @@
+<app-header></app-header>
+<app-task-item  *ngFor="let task of tasks" (deleteTaskEvent)="deleteTask(task)" [item]="task"></app-task-item>
