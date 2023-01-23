@@ -16,6 +16,10 @@ export class TaskService {
    return this.http.get<Task[]>(environment.apiUrl+'task')
   };
 
+  addTask(task:Task):Observable<Task>{
+    return this.http.post<Task>(environment.apiUrl,task)
+   };
+
   deleteTask(task:Task):Observable<Task[]>{
     return this.http.delete<Task[]>(environment.apiUrl+'task/'+task.id)
    };

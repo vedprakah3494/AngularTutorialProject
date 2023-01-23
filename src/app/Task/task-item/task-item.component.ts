@@ -1,4 +1,4 @@
-import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter, ViewEncapsulation } from '@angular/core';
 import { Task } from 'src/app/Task/Models/Task';
 import {faTimes} from '@fortawesome/free-solid-svg-icons';
 import { from } from 'rxjs';
@@ -12,7 +12,7 @@ import { from } from 'rxjs';
 export class TaskItemComponent implements OnInit {
   @Input() item!: Task;
   @Output() deleteTaskEvent=new EventEmitter();
-
+ // taskForm:FromGroup;
   faTimes=faTimes;
 
   constructor() { }
@@ -24,7 +24,7 @@ export class TaskItemComponent implements OnInit {
   deleteTask(item: any)
   {
     console.log(item);
-    this.deleteTaskEvent.emit(item)
+    this.deleteTaskEvent.emit(item);
   }
 
 }

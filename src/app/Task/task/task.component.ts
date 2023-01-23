@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { Task } from 'src/app/Task/Models/Task';
 import { TaskService } from '../service/task.service';
 
@@ -8,11 +8,17 @@ import { TaskService } from '../service/task.service';
   styleUrls: ['./task.component.css']
 })
 export class TaskComponent implements OnInit {
+  isAddtask:boolean=true;
   tasks: Task[] = [];
   constructor(private taskService: TaskService) { }
 
   ngOnInit(): void {
     this.taskService.getTask().subscribe((task) => this.tasks = task);
+  }
+
+  addTask(status:boolean)
+  {
+    this.isAddtask=status;
   }
 
   deleteTask(task: Task) {

@@ -7,6 +7,7 @@ import { ButtonComponent } from './button/button.component';
 import { TaskComponent } from './task/task.component';
 import { TaskItemComponent } from './task-item/task-item.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { SharedModule } from '../shared/shared.module';
 
 @NgModule({
   declarations: [
@@ -15,6 +16,6 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
     TaskComponent,
     TaskItemComponent,
   ],
-  imports: [CommonModule, TaskRoutingModule,FontAwesomeModule],
+  imports: [CommonModule, TaskRoutingModule,FontAwesomeModule,SharedModule],
 })
 export class TaskModule {}

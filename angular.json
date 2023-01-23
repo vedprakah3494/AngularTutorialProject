@@ -4,6 +4,15 @@
   "newProjectRoot": "projects",
   "projects": {
     "AngularApp": {
+      "i18n": {
+        "sourceLocale": "en-US",
+        "locales": {
+          "es-PR": {
+            "translation": "src/locale/messages.es.xlf",
+            "baseHref": "es-PR/"
+          }
+        }
+      },
       "projectType": "application",
       "schematics": {
         "@schematics/angular:application": {
@@ -74,6 +83,7 @@
             "development": {
               "browserTarget": "AngularApp:build:development"
             }
+            
           },
           "defaultConfiguration": "development"
         },

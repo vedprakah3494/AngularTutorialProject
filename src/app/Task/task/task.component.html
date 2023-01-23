@@ -1,2 +1,8 @@
-<app-header></app-header>
-<app-task-item  *ngFor="let task of tasks" (deleteTaskEvent)="deleteTask(task)" [item]="task"></app-task-item>
+
+<ng-container *ngIf="isAddtask">
+    <app-header (addTaskEvent)="addTask($event)" ></app-header>
+    <app-task-item  *ngFor="let taskItem of tasks" (deleteTaskEvent)="deleteTask($event)" [item]="taskItem"></app-task-item>
+</ng-container>
+<ng-container>
+    
+</ng-container>

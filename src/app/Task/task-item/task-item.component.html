@@ -1,4 +1,4 @@
-<div class="task" [ngClass]="{reminder:item.reminder}">
-  <h3>{{ item.text }}<fa-icon (click)="deleteTask(item)" [ngStyle]="{color:'Red'}"   [icon]="faTimes" ></fa-icon></h3>
-  <p>{{ item.day }}</p>
+<div class="task" [appStatus]="item.status">
+  <h3 i18n>{{ item.text }}<fa-icon (click)="deleteTask(item)" [ngStyle]="{color:'Red'}"   [icon]="faTimes" ></fa-icon></h3>
+  <p i18n>{{ item.day }}</p>
 </div>
